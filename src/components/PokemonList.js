@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function PokemonList() {
   const [pokemon, setPokemon] = useState([]);
@@ -12,6 +12,11 @@ export default function PokemonList() {
       console.log(error);
     }
   }
+
+  useEffect(() => {
+    loadPokemon();
+    // just on the first render, if empty array is passed
+  }, []);
 
   return (
     <main>
