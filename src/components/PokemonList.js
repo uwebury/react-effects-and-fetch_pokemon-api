@@ -16,6 +16,7 @@ export default function PokemonList() {
   useEffect(() => {
     loadPokemon();
     // just on the first render, if empty array is passed
+    // used often in conjunction with fetch requests
   }, []);
 
   return (
